@@ -1,0 +1,347 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Popit · Reporte Meta Ads · Septiembre 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#06231e;--surface:#0b332c;--surface-2:#082a24;--border:rgba(127,209,190,0.14);--accent:#5BB8A8;--accent2:#E8A04B;--accent3:#FF6F61;--text:#eaf4f1;--muted:#8fb3ab;--good:#4ec9a6;--warn:#E8A04B;--bad:#ff6f61;--info:#7fb6ff;--teal:#093b34}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Hanken Grotesk',sans-serif;font-size:clamp(14px,1.5vw,16px);line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:fixed;inset:0;z-index:-1;opacity:.55;background-color:var(--bg);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M24 2c8 0 14 6 14 14s-6 14-14 14S10 24 10 16 16 2 24 2zm0 24c8 0 14 6 14 14s-6 14-14 14S10 48 10 40 16 26 24 26zM0 14c8 0 14 6 14 14S8 42 0 42zm48 0c-8 0-14 6-14 14s6 14 14 14z' fill='none' stroke='%237fd1be' stroke-opacity='.06'/%3E%3C/svg%3E")}
+.topbar{position:sticky;top:0;z-index:100;background:rgba(6,35,30,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:12px clamp(16px,4vw,48px);display:flex;align-items:center;justify-content:space-between;gap:16px}
+.topbar-logo{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(15px,1.8vw,19px);letter-spacing:.22em;color:var(--text)}
+.topbar-badge{background:rgba(91,184,168,.12);border:1px solid rgba(91,184,168,.32);color:var(--accent);font-size:11px;font-weight:600;padding:5px 13px;border-radius:99px;white-space:nowrap;letter-spacing:.05em;font-family:'Spline Sans Mono',monospace}
+.header{position:relative;padding:clamp(48px,8vw,104px) clamp(16px,6vw,80px) clamp(40px,6vw,72px);overflow:hidden;border-bottom:1px solid var(--border)}
+.header::before{content:'';position:absolute;top:-140px;right:-90px;width:640px;height:640px;background:radial-gradient(circle,rgba(91,184,168,.12) 0%,transparent 70%);pointer-events:none}
+.eyebrow{font-family:'Spline Sans Mono',monospace;color:var(--accent);font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:14px}
+h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(32px,5vw,58px);line-height:1.05;max-width:900px}
+h1 em{font-style:italic;color:var(--accent)}
+.header p.lead{max-width:760px;color:var(--muted);margin-top:20px;font-size:clamp(15px,1.6vw,18px)}
+.meta{display:flex;flex-wrap:wrap;gap:28px;margin-top:34px}
+.meta div{font-size:13px;color:var(--muted)}.meta b{display:block;color:var(--text);font-family:'Spline Sans Mono',monospace;font-size:14px;margin-top:2px}
+nav.toc{padding:18px clamp(16px,4vw,48px);border-bottom:1px solid var(--border);display:flex;flex-wrap:wrap;gap:8px}
+nav.toc a{color:var(--muted);text-decoration:none;font-size:12px;font-family:'Spline Sans Mono',monospace;padding:6px 10px;border:1px solid var(--border);border-radius:6px}
+nav.toc a:hover{color:var(--accent);border-color:var(--accent)}
+.section{padding:clamp(40px,6vw,72px) clamp(16px,6vw,80px);border-bottom:1px solid var(--border)}
+.section-num{font-family:'Spline Sans Mono',monospace;color:var(--accent);font-size:12px;letter-spacing:.2em}
+h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(24px,3vw,36px);margin:6px 0 10px}
+h3{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(18px,2vw,22px);margin:34px 0 12px;color:var(--text)}
+h4{font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.sub{color:var(--muted);max-width:820px;margin-bottom:26px}
+p{max-width:900px}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:22px 0}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px 18px 16px;position:relative;overflow:hidden}
+.kpi::after{content:'';position:absolute;left:0;top:0;height:3px;width:100%;background:linear-gradient(90deg,var(--accent),transparent)}
+.kpi.gold::after{background:linear-gradient(90deg,var(--accent2),transparent)}
+.kpi .label{font-size:12px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.kpi .value{font-family:'Fraunces',serif;font-size:clamp(26px,3vw,34px);font-weight:600;margin:4px 0 2px;line-height:1.1}
+.kpi .sub-value{font-size:13px;color:var(--muted);font-family:'Spline Sans Mono',monospace}
+.badge{display:inline-block;font-family:'Spline Sans Mono',monospace;font-size:11px;font-weight:600;padding:3px 9px;border-radius:99px;letter-spacing:.04em;white-space:nowrap}
+.badge.good{background:rgba(78,201,166,.15);color:var(--good);border:1px solid rgba(78,201,166,.35)}
+.badge.warn{background:rgba(232,160,75,.15);color:var(--warn);border:1px solid rgba(232,160,75,.35)}
+.badge.bad{background:rgba(255,111,97,.15);color:var(--bad);border:1px solid rgba(255,111,97,.35)}
+.badge.info{background:rgba(127,182,255,.15);color:var(--info);border:1px solid rgba(127,182,255,.35)}
+.badge.neutral{background:rgba(143,179,171,.15);color:var(--muted);border:1px solid rgba(143,179,171,.3)}
+.alert{border-radius:14px;padding:18px 20px;margin:14px 0;border:1px solid;background:var(--surface)}
+.alert h4{margin-bottom:6px}.alert p{color:var(--text);font-size:15px}
+.alert.good{border-color:rgba(78,201,166,.4)}.alert.good h4{color:var(--good)}
+.alert.warn{border-color:rgba(232,160,75,.4)}.alert.warn h4{color:var(--warn)}
+.alert.info{border-color:rgba(127,182,255,.4)}.alert.info h4{color:var(--info)}
+.alert.bad{border-color:rgba(255,111,97,.45)}.alert.bad h4{color:var(--bad)}
+.table-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--border);border-radius:14px;background:var(--surface)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:12px 14px;border-bottom:1px solid var(--border);white-space:nowrap}
+td{padding:11px 14px;border-bottom:1px solid var(--border);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.n,th.n{text-align:right;font-family:'Spline Sans Mono',monospace;white-space:nowrap}
+td.lect{color:var(--muted);font-size:13px;min-width:220px}
+.bar{height:8px;background:rgba(255,255,255,.06);border-radius:99px;overflow:hidden;margin-top:6px}
+.bar-fill{height:100%;border-radius:99px;background:var(--accent)}
+.bar-fill.gold{background:var(--accent2)}.bar-fill.coral{background:var(--accent3)}.bar-fill.good{background:var(--good)}.bar-fill.bad{background:var(--bad)}
+.split{display:flex;height:16px;border-radius:99px;overflow:hidden;margin:14px 0 8px;border:1px solid var(--border)}
+.split div{height:100%}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--muted)}
+.legend span::before{content:'';display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.legend .a::before{background:var(--accent)}.legend .b::before{background:var(--accent2)}.legend .c::before{background:var(--accent3)}.legend .d::before{background:var(--info)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:18px 0}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px}
+.card .tag{font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.card .title{font-family:'Fraunces',serif;font-size:19px;font-weight:600;margin-bottom:10px;line-height:1.2}
+.card .stats{display:grid;grid-template-columns:1fr 1fr;gap:6px 12px;font-size:13px;margin:10px 0}
+.card .stats b{display:block;font-family:'Spline Sans Mono',monospace;font-size:15px;color:var(--text)}
+.card .stats span{color:var(--muted)}
+.card p{font-size:14px;color:var(--muted);margin-top:8px}
+.card.prio-red{border-left:4px solid var(--bad)}.card.prio-yellow{border-left:4px solid var(--warn)}.card.prio-purple{border-left:4px solid #b08cff}
+.badge.purple{background:rgba(176,140,255,.15);color:#b08cff;border:1px solid rgba(176,140,255,.35)}
+.aes-row{display:grid;grid-template-columns:36px 150px 1fr 70px;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--border);font-size:14px}
+.aes-row:last-child{border-bottom:0}
+.aes-track{position:relative;height:14px;background:rgba(255,255,255,.05);border-radius:99px}
+.aes-track .fill{height:100%;border-radius:99px}
+.aes-track .mid{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--text);opacity:.6}
+.aes-val{font-family:'Spline Sans Mono',monospace;text-align:right;font-weight:600}
+.formula{background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:16px 18px;font-family:'Spline Sans Mono',monospace;font-size:13px;color:var(--accent);overflow-x:auto;margin:14px 0}
+.conclusion p{margin-bottom:16px;max-width:860px;font-size:16px}
+.conclusion strong{color:var(--good)}
+.focus-box{background:var(--surface);border:1px solid rgba(91,184,168,.35);border-radius:16px;padding:24px;margin-top:28px;max-width:860px}
+.focus-list{display:grid;gap:12px;margin-top:12px}
+.focus-item{display:flex;gap:14px;align-items:flex-start;color:var(--muted);font-size:15px}
+.focus-num{font-family:'Fraunces',serif;color:var(--accent2);font-size:22px;font-weight:600;line-height:1.1;min-width:34px}
+.footer{padding:28px clamp(16px,6vw,80px);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:12px;color:var(--muted);font-family:'Spline Sans Mono',monospace}
+.note{font-size:13px;color:var(--muted);margin-top:10px}
+@media print{.topbar,nav.toc{display:none}body::before{display:none}.section{break-inside:auto}.kpi,.card,.alert{break-inside:avoid}}
+</style></head><body>
+<div class="topbar"><div class="topbar-logo">CAIMÁN AGENCY</div><div class="topbar-badge">POPIT · META ADS · SEPTIEMBRE 2026</div></div>
+<div class="header">
+ <div class="eyebrow">Reporte mensual · Captación de leads B2B</div>
+ <h1>Septiembre 2026: Popit abre el canal <em>B2B</em> y consigue sus primeros 119 leads</h1>
+ <p class="lead">Este mes la cuenta cambia de objetivo. Dejamos atrás la venta online al consumidor final y la pauta pasa a trabajar la captación de contactos de negocio (tiendas gourmet, HORECA, regalo corporativo y distribución), con una campaña de reconocimiento de marca de apoyo. Es el primer mes de esta etapa, así que el reporte fija la línea base sobre la que mediremos octubre.</p>
+ <div class="meta">
+  <div>Cliente<b>Popit · Palomitas gourmet</b></div>
+  <div>Periodo<b>1 – 30 sept 2026</b></div>
+  <div>Canal<b>Meta Ads (Facebook + Instagram)</b></div>
+  <div>Objetivo principal<b>Leads B2B</b></div>
+  <div>Atribución<b>7d clic / 1d vista</b></div>
+ </div>
+</div>
+<nav class="toc"><a href="#s1">01 · Resumen</a><a href="#s2">02 · Destinos</a><a href="#s3">03 · Campañas</a><a href="#s4">04 · País</a><a href="#s5">05 · Demografía</a><a href="#s6">06 · Cambios & Frecuencia</a><a href="#s7">07 · Creatividades</a><a href="#s8">08 · AES</a><a href="#s9">09 · Next Steps</a><a href="#s10">10 · Conclusión</a></nav>
+<div class="section" id="s1"><div class="section-num">SECCIÓN 01</div><h2>Resumen ejecutivo</h2>
+<p class="sub">Dos campañas activas: <b>B2B_CAPTACIÓNLEADS</b> (captación de contactos de negocio, 61% del gasto) y <b>POP_RECO_SEGUIDORES_0826</b> (reconocimiento, visitas al perfil de Instagram, 39%). No hay mes anterior comparable: la campaña de leads se lanzó en septiembre y la de reconocimiento arrancó el 26 de agosto, así que las comparativas quedan marcadas como <span class="badge info">NUEVO</span> y este mes es la línea base.</p>
+<div class="kpi-grid">
+<div class="kpi "><div class="label">Gasto total</div><div class="value">395,45 €</div><div class="sub-value">B2B 242,66 € · Reco 152,79 €</div></div>
+<div class="kpi gold"><div class="label">Leads B2B</div><div class="value">119</div><div class="sub-value">formulario Meta + web</div></div>
+<div class="kpi gold"><div class="label">CPL (coste por lead)</div><div class="value">2,04 €</div><div class="sub-value">FORM 1,39 € · WEB 3,65 €</div></div>
+<div class="kpi "><div class="label">Impresiones</div><div class="value">86.695</div><div class="sub-value">B2B 40.470 · Reco 46.225</div></div>
+<div class="kpi "><div class="label">Alcance (aprox.)</div><div class="value">53.618</div><div class="sub-value">B2B ≈18.368 · Reco ≈35.250</div></div>
+<div class="kpi "><div class="label">Frecuencia</div><div class="value">2,2× / 1,3×</div><div class="sub-value">B2B / Reconocimiento</div></div>
+<div class="kpi "><div class="label">CPM medio</div><div class="value">4,56 €</div><div class="sub-value">B2B 6,00 € · Reco 3,31 €</div></div>
+<div class="kpi "><div class="label">CTR enlace</div><div class="value">1,97%</div><div class="sub-value">B2B · Reco 5,74%</div></div>
+<div class="kpi "><div class="label">CPC enlace</div><div class="value">0,30 €</div><div class="sub-value">B2B · Reco 0,06 €</div></div>
+<div class="kpi "><div class="label">Visitas al perfil IG</div><div class="value">3.298</div><div class="sub-value">coste por visita 0,046 €</div></div>
+</div>
+<div class="alert good"><h4>✅ Lo que ha funcionado</h4><p>La captación por <b>formulario nativo de Meta</b> es la vía eficiente: <b>85 leads a 1,39 €</b> frente a 34 leads a 3,65 € vía web. Los conjuntos de <b>Distribución</b> (0,90 €) y <b>Gourmet</b> (1,16 €) por formulario lideran en coste. El anuncio <b>ad 1 de Distribución</b> cierra 26 leads a 0,83 €. La campaña de reconocimiento sigue barata: visitas al perfil a 0,046 € con un CTR del 5,74%.</p></div>
+<div class="alert warn"><h4>⚠️ A vigilar</h4><p><b>Calidad del lead.</b> 119 contactos es un buen volumen para el primer mes, pero hasta que Popit confirme cuántos son negocios reales (y de qué tipo) el CPL es una métrica de coste, no de valor. El formulario de Meta es más barato pero también más frío que el de la web. <b>Regalo corporativo</b> es el perfil más caro (2,99 €) y <b>HORECA</b> el segundo (2,58 €), justo los dos que más interesan comercialmente. La frecuencia de la campaña B2B ya está en 2,2× sobre una audiencia estrecha.</p></div>
+<div class="alert info"><h4>ℹ️ Notas estructurales del mes</h4><p>Lanzamiento de la campaña B2B con 8 conjuntos (4 perfiles × 2 vías de captación: formulario Meta y formulario web). A cierre de mes quedan activos los tres conjuntos de formulario con mejor coste (Gourmet, HORECA, Distribución); los conjuntos web y el de Regalo corporativo por formulario están en pausa. Se apagó el anuncio más caro de HORECA web (ad 3, 8 leads a 3,17 €). La campaña de reconocimiento se mantiene a 5 €/día e incorporó el Reel del 27/08.</p></div>
+</div>
+<div class="section" id="s2"><div class="section-num">SECCIÓN 02</div><h2>Análisis por destino</h2>
+<p class="sub">El tráfico de la cuenta va a tres destinos: el <b>formulario nativo de Meta</b> (el usuario deja sus datos sin salir de la app), el <b>formulario web en popit.es</b> (más fricción, más cualificación) y el <b>perfil de Instagram</b> (reconocimiento). No se anuncia producto a consumidor final: lo que se vende es la propuesta mayorista de Popit a negocios.</p>
+<div class="split"><div style="width:30.0%;background:var(--accent)"></div><div style="width:31.4%;background:var(--accent2)"></div><div style="width:38.6%;background:var(--info)"></div></div>
+<div class="legend"><span class="a">Formulario Meta 30%</span><span class="b">Formulario web 31%</span><span class="d">Perfil Instagram 39%</span></div>
+<div class="kpi-grid">
+<div class="kpi "><div class="label">Formulario Meta · gasto</div><div class="value">118,56 €</div><div class="sub-value">21.161 impresiones</div></div>
+<div class="kpi gold"><div class="label">Formulario Meta · leads</div><div class="value">85</div><div class="sub-value">CPL 1,39 € · CTR 1,85%</div></div>
+<div class="kpi "><div class="label">Formulario web · gasto</div><div class="value">124,10 €</div><div class="sub-value">19.309 impresiones</div></div>
+<div class="kpi gold"><div class="label">Formulario web · leads</div><div class="value">34</div><div class="sub-value">CPL 3,65 € · CTR 2,10%</div></div>
+<div class="kpi "><div class="label">Perfil IG · gasto</div><div class="value">152,79 €</div><div class="sub-value">46.225 impresiones</div></div>
+<div class="kpi "><div class="label">Perfil IG · visitas</div><div class="value">3.298</div><div class="sub-value">0,046 € por visita · CTR 5,74%</div></div>
+</div>
+<h3>Reparto por perfil de negocio (ICP)</h3>
+<div class="table-wrap"><table><tr><th>Perfil</th><th class="n">Gasto</th><th class="n">% gasto</th><th class="n">Leads</th><th class="n">CPL</th><th class="n">CTR enlace</th><th class="n">CPM</th><th>Lectura</th></tr>
+<tr><td><b>Distribución</b></td><td class='n'>48,52 €</td><td class='n'>20%</td><td class='n'>35</td><td class='n'>1,39 €</td><td class='n'>2,10%</td><td class='n'>5,23 €</td><td class='lect'>El más eficiente en coste y el de mayor volumen. Perfil que responde bien al formulario de Meta.</td></tr>
+<tr><td><b>Gourmet</b></td><td class='n'>61,79 €</td><td class='n'>25%</td><td class='n'>36</td><td class='n'>1,72 €</td><td class='n'>2,02%</td><td class='n'>5,75 €</td><td class='lect'>Segundo en coste. Tienda gourmet es el perfil más natural para la marca.</td></tr>
+<tr><td><b>HORECA</b></td><td class='n'>69,64 €</td><td class='n'>29%</td><td class='n'>27</td><td class='n'>2,58 €</td><td class='n'>2,06%</td><td class='n'>7,11 €</td><td class='lect'>Volumen medio a coste medio-alto. CPM el más caro de los cuatro: la audiencia es más estrecha.</td></tr>
+<tr><td><b>Regalo Corporativo</b></td><td class='n'>62,71 €</td><td class='n'>26%</td><td class='n'>21</td><td class='n'>2,99 €</td><td class='n'>1,73%</td><td class='n'>5,89 €</td><td class='lect'>El más caro y el de menor volumen. Con la campaña de Navidad a la vista, es el que más conviene replantear.</td></tr>
+</table></div>
+<div class="alert info"><h4>Lectura del reparto</h4><p>El presupuesto se repartió casi a partes iguales entre las dos vías de captación (49% formulario Meta / 51% web) y entre los cuatro perfiles, que era exactamente el objetivo de este primer mes: <b>test en igualdad de condiciones para ver qué perfil y qué mecanismo cierran mejor</b>. El resultado es claro en coste (formulario Meta, Distribución y Gourmet) y queda pendiente en calidad. El 39% destinado a reconocimiento es coherente para una marca que entra en B2B: el comprador de negocio mira el perfil antes de responder.</p></div>
+</div>
+<div class="section" id="s3"><div class="section-num">SECCIÓN 03</div><h2>Análisis por campaña — Δ% vs mes anterior</h2>
+<p class="sub">No existe un agosto comparable: la campaña B2B se lanzó en septiembre y la de reconocimiento el 26 de agosto. Las dos quedan como <span class="badge info">NUEVO</span>; las cifras de este mes son la referencia para el Δ% de octubre.</p>
+<div class="table-wrap"><table><tr><th>Campaña</th><th>Métrica</th><th class="n">Agosto</th><th class="n">Septiembre</th><th class="n">Δ%</th><th>Lectura</th></tr>
+<tr><td><b>B2B_CAPTACIÓNLEADS</b><br><span class="badge neutral">LEAD GEN</span></td><td>Gasto</td><td class='n'>—</td><td class='n'>242,66 €</td><td class='n'><span class="badge info">NUEVO</span></td><td class='lect'>Primer mes completo de captación B2B.</td></tr>
+<tr><td></td><td>Impresiones</td><td class='n'>—</td><td class='n'>40.470</td><td class='n'><span class="badge info">NUEVO</span></td><td class='lect'>Audiencia B2B estrecha; la mitad de las impresiones del reconocimiento con el 60% más de gasto.</td></tr>
+<tr><td></td><td>Frecuencia</td><td class='n'>—</td><td class='n'>2,2×</td><td class='n'><span class="badge info">NUEVO</span></td><td class='lect'>Ya alta para un primer mes: la audiencia es pequeña.</td></tr>
+<tr><td></td><td>CPM</td><td class='n'>—</td><td class='n'>6,00 €</td><td class='n'><span class="badge info">NUEVO</span></td><td class='lect'>Normal para una segmentación profesional en España.</td></tr>
+<tr><td></td><td>CTR enlace</td><td class='n'>—</td><td class='n'>1,97%</td><td class='n'><span class="badge info">NUEVO</span></td><td class='lect'>Buen CTR para copy B2B.</td></tr>
+<tr><td></td><td>Leads</td><td class='n'>—</td><td class='n'>119</td><td class='n'><span class="badge info">NUEVO</span></td><td class='lect'>Objetivo principal del mes.</td></tr>
+<tr><td></td><td>CPL</td><td class='n'>—</td><td class='n'>2,04 €</td><td class='n'><span class="badge info">NUEVO</span></td><td class='lect'>Línea base. El objetivo de CPL debe fijarse con el cliente.</td></tr>
+<tr><td><b>POP_RECO_SEGUIDORES_0826</b><br><span class="badge neutral">RECONOCIMIENTO</span></td><td>Gasto</td><td class='n'>—</td><td class='n'>152,79 €</td><td class='n'><span class="badge info">NUEVO</span></td><td class='lect'>5 €/día sostenidos todo el mes.</td></tr>
+<tr><td></td><td>Impresiones</td><td class='n'>—</td><td class='n'>46.225</td><td class='n'><span class="badge info">NUEVO</span></td><td class='lect'>Alcance amplio y barato.</td></tr>
+<tr><td></td><td>Frecuencia</td><td class='n'>—</td><td class='n'>1,3×</td><td class='n'><span class="badge info">NUEVO</span></td><td class='lect'>Sin saturación.</td></tr>
+<tr><td></td><td>CPM</td><td class='n'>—</td><td class='n'>3,31 €</td><td class='n'><span class="badge info">NUEVO</span></td><td class='lect'>Muy barato: la creatividad de marca entra bien.</td></tr>
+<tr><td></td><td>CTR enlace</td><td class='n'>—</td><td class='n'>5,74%</td><td class='n'><span class="badge info">NUEVO</span></td><td class='lect'>CTR muy alto, propio del objetivo de perfil.</td></tr>
+<tr><td></td><td>Visitas al perfil</td><td class='n'>—</td><td class='n'>3.298</td><td class='n'><span class="badge info">NUEVO</span></td><td class='lect'>Resultado principal.</td></tr>
+<tr><td></td><td>Coste por visita</td><td class='n'>—</td><td class='n'>0,046 €</td><td class='n'><span class="badge info">NUEVO</span></td><td class='lect'>Línea base.</td></tr>
+</table></div>
+<h3>Conjuntos de anuncios de la campaña B2B</h3>
+<div class="table-wrap"><table><tr><th>Conjunto</th><th>Estado 30/09</th><th class="n">Gasto</th><th class="n">Impr.</th><th class="n">CTR enl.</th><th class="n">CPM</th><th class="n">Leads</th><th class="n">CPL</th></tr>
+<tr><td>B2B_CAPTACIÓNLEADS_WEB_HOREC</td><td><span class="badge neutral">PAUSADO</span></td><td class='n'>36,30 €</td><td class='n'>5.127</td><td class='n'>2,32%</td><td class='n'>7,08 €</td><td class='n'>9</td><td class='n'>4,03 €</td></tr>
+<tr><td>B2B_CAPTACIÓNLEADS_FORM_REGALO CORPORATIVO - Copia</td><td><span class="badge neutral">PAUSADO</span></td><td class='n'>32,10 €</td><td class='n'>5.191</td><td class='n'>1,62%</td><td class='n'>6,18 €</td><td class='n'>14</td><td class='n'>2,29 €</td></tr>
+<tr><td>B2B_CAPTACIÓNLEADS_FORM_HORECA</td><td><span class="badge good">ACTIVO</span></td><td class='n'>31,95 €</td><td class='n'>4.420</td><td class='n'>1,70%</td><td class='n'>7,23 €</td><td class='n'>18</td><td class='n'>1,77 €</td></tr>
+<tr><td>WEB_GOURMET</td><td><span class="badge neutral">PAUSADO</span></td><td class='n'>31,62 €</td><td class='n'>4.575</td><td class='n'>2,08%</td><td class='n'>6,91 €</td><td class='n'>10</td><td class='n'>3,16 €</td></tr>
+<tr><td>B2B_CAPTACIÓNLEADS_WEB_REGALO CORPORATIVO</td><td><span class="badge neutral">PAUSADO</span></td><td class='n'>30,61 €</td><td class='n'>5.455</td><td class='n'>1,83%</td><td class='n'>5,61 €</td><td class='n'>7</td><td class='n'>4,37 €</td></tr>
+<tr><td>B2B_CAPTACIÓNLEADS_FORM_GOURMET</td><td><span class="badge good">ACTIVO</span></td><td class='n'>30,17 €</td><td class='n'>6.176</td><td class='n'>1,98%</td><td class='n'>4,89 €</td><td class='n'>26</td><td class='n'>1,16 €</td></tr>
+<tr><td>B2B_CAPTACIÓNLEADS_FORM_DISTRIBUCIÓN</td><td><span class="badge good">ACTIVO</span></td><td class='n'>24,34 €</td><td class='n'>5.374</td><td class='n'>2,07%</td><td class='n'>4,53 €</td><td class='n'>27</td><td class='n'>0,90 €</td></tr>
+<tr><td>B2B_CAPTACIÓNLEADS_WEB_DISTRIBUCIÓN</td><td><span class="badge neutral">PAUSADO</span></td><td class='n'>24,18 €</td><td class='n'>3.907</td><td class='n'>2,15%</td><td class='n'>6,19 €</td><td class='n'>8</td><td class='n'>3,02 €</td></tr>
+<tr><td>B2B_CAPTACIÓNLEADS_WEB_HORECA</td><td><span class="badge neutral">ARCHIVADO</span></td><td class='n'>1,39 €</td><td class='n'>245</td><td class='n'>3,27%</td><td class='n'>5,67 €</td><td class='n'>0</td><td class='n'>—</td></tr>
+</table></div>
+<div class="alert info"><h4>Insight cruzado</h4><p>Las dos campañas se complementan: el reconocimiento compra atención barata (3,31 € de CPM, 5,74% de CTR) y la B2B compra intención a un coste lógico para su audiencia. Dentro de la B2B la lectura no es "qué perfil" sino "qué perfil por qué vía": los cuatro conjuntos de formulario Meta suman 85 leads a 1,39 €, los cuatro de web 34 a 3,65 €. La decisión de dejar activos solo los conjuntos de formulario con mejor coste es la correcta mientras se valida la calidad; si la calidad del formulario web resulta claramente superior, habrá que reabrirlo con el píxel bien medido.</p></div>
+</div>
+<div class="section" id="s4"><div class="section-num">SECCIÓN 04</div><h2>Análisis por país de origen</h2>
+<p class="sub">Un único mercado: <b>España</b>. Las campañas segmentan exclusivamente territorio español y el export de este mes no incluye el desglose por país, así que confirmamos el dato por configuración de la cuenta, no por fila de datos.</p>
+<div class="kpi-grid">
+<div class="kpi "><div class="label">🇪🇸 España · gasto</div><div class="value">395,45 €</div><div class="sub-value">100% de la inversión</div></div>
+<div class="kpi "><div class="label">España · impresiones</div><div class="value">86.695</div><div class="sub-value">3.451 clics en el enlace</div></div>
+<div class="kpi gold"><div class="label">España · leads B2B</div><div class="value">119</div><div class="sub-value">CPL 2,04 €</div></div>
+<div class="kpi "><div class="label">España · visitas perfil</div><div class="value">3.298</div><div class="sub-value">0,046 € por visita</div></div>
+</div>
+<div class="alert info"><h4>Geo-targeting</h4><p>Correcto para la fase: la expansión de distribución es nacional y el seguimiento comercial lo hace el equipo de Popit en España. No hay fuga a otros países. Para octubre conviene incluir el desglose por país (y por región) en el export: con 119 leads ya tiene sentido ver <b>qué comunidades autónomas generan más contactos</b> y cruzarlo con la logística de Popit desde Zaragoza.</p></div>
+</div>
+<div class="section" id="s5"><div class="section-num">SECCIÓN 05</div><h2>Análisis demográfico</h2>
+<p class="sub">Esta sección cambia de sentido respecto a la etapa B2C: ya no buscamos a la compradora de palomitas, sino a <b>quien decide compras en un negocio</b>. Los datos de la campaña B2B son los que mandan; los de reconocimiento se incluyen como contraste.</p>
+<h3>5a · Por género</h3>
+<h4>Campaña B2B (leads)</h4>
+<div class="table-wrap"><table><tr><th>Género</th><th class="n">Gasto</th><th class="n">% gasto</th><th class="n">Impr.</th><th class="n">CTR enl.</th><th class="n">CPM</th><th class="n">Leads</th><th class="n">CPL</th></tr>
+<tr><td><b>Mujer</b></td><td class='n'>140,73 €</td><td class='n'>58%</td><td class='n'>22.297</td><td class='n'>1,93%</td><td class='n'>6,31 €</td><td class='n'>57</td><td class='n'>2,47 €</td></tr><tr><td><b>Hombre</b></td><td class='n'>96,80 €</td><td class='n'>40%</td><td class='n'>17.416</td><td class='n'>2,00%</td><td class='n'>5,56 €</td><td class='n'>59</td><td class='n'>1,64 €</td></tr><tr><td><b>No declarado</b></td><td class='n'>5,13 €</td><td class='n'>2%</td><td class='n'>757</td><td class='n'>2,38%</td><td class='n'>6,78 €</td><td class='n'>3</td><td class='n'>1,71 €</td></tr></table></div>
+<h4>Campaña de reconocimiento (visitas al perfil)</h4>
+<div class="table-wrap"><table><tr><th>Género</th><th class="n">Gasto</th><th class="n">% gasto</th><th class="n">Impr.</th><th class="n">CTR enl.</th><th class="n">CPM</th><th class="n">Visitas</th><th class="n">Coste/visita</th></tr>
+<tr><td><b>Mujer</b></td><td class='n'>131,98 €</td><td class='n'>86%</td><td class='n'>38.664</td><td class='n'>5,81%</td><td class='n'>3,41 €</td><td class='n'>2.775</td><td class='n'>0,05 €</td></tr><tr><td><b>Hombre</b></td><td class='n'>19,71 €</td><td class='n'>13%</td><td class='n'>7.229</td><td class='n'>5,24%</td><td class='n'>2,73 €</td><td class='n'>464</td><td class='n'>0,04 €</td></tr><tr><td><b>No declarado</b></td><td class='n'>1,10 €</td><td class='n'>1%</td><td class='n'>332</td><td class='n'>8,73%</td><td class='n'>3,31 €</td><td class='n'>59</td><td class='n'>0,02 €</td></tr></table></div>
+<div class="alert warn"><h4>Sesgo de género</h4><p>Meta sigue entregando la campaña B2B mayoritariamente a mujeres (58% del gasto), heredando el aprendizaje de la cuenta B2C. Pero en B2B <b>los hombres convierten más barato</b>: 59 leads a 1,64 € frente a 57 a 2,47 € con un 18% más de inversión. No es motivo para excluir a nadie (el perfil de tienda gourmet está muy feminizado y el reconocimiento sigue siendo femenino al 86%), pero sí para dejar que la optimización por lead corrija el reparto y, sobre todo, para cruzarlo con la calidad real de cada lead.</p></div>
+<h3>5b · Por edad (campaña B2B)</h3>
+<div class="table-wrap"><table><tr><th>Tramo</th><th>Gasto</th><th class="n">% gasto</th><th class="n">Impr.</th><th class="n">CTR enl.</th><th class="n">CPM</th><th class="n">Leads</th><th class="n">CPL</th></tr>
+<tr><td><b>18-24</b></td><td style='min-width:180px'>3,94 €<div class="bar"><div class="bar-fill accent" style="width:4.5%"></div></div></td><td class='n'>2%</td><td class='n'>789</td><td class='n'>1,77%</td><td class='n'>4,99 €</td><td class='n'>0</td><td class='n'>—</td></tr>
+<tr><td><b>25-34</b></td><td style='min-width:180px'>28,55 €<div class="bar"><div class="bar-fill accent" style="width:32.8%"></div></div></td><td class='n'>12%</td><td class='n'>5.976</td><td class='n'>1,62%</td><td class='n'>4,78 €</td><td class='n'>12</td><td class='n'>2,38 €</td></tr>
+<tr><td><b>35-44</b></td><td style='min-width:180px'>54,33 €<div class="bar"><div class="bar-fill accent" style="width:62.5%"></div></div></td><td class='n'>22%</td><td class='n'>9.913</td><td class='n'>1,57%</td><td class='n'>5,48 €</td><td class='n'>23</td><td class='n'>2,36 €</td></tr>
+<tr><td><b>45-54</b></td><td style='min-width:180px'>86,99 €<div class="bar"><div class="bar-fill accent" style="width:100.0%"></div></div></td><td class='n'>36%</td><td class='n'>13.955</td><td class='n'>1,96%</td><td class='n'>6,23 €</td><td class='n'>43</td><td class='n'>2,02 €</td></tr>
+<tr><td><b>55-64</b></td><td style='min-width:180px'>58,51 €<div class="bar"><div class="bar-fill accent" style="width:67.3%"></div></div></td><td class='n'>24%</td><td class='n'>8.397</td><td class='n'>2,48%</td><td class='n'>6,97 €</td><td class='n'>35</td><td class='n'>1,67 €</td></tr>
+<tr><td><b>65+</b></td><td style='min-width:180px'>10,31 €<div class="bar"><div class="bar-fill accent" style="width:11.9%"></div></div></td><td class='n'>4%</td><td class='n'>1.438</td><td class='n'>3,41%</td><td class='n'>7,17 €</td><td class='n'>6</td><td class='n'>1,72 €</td></tr>
+</table></div>
+<div class="alert info"><h4>Lectura por edad</h4><p>El núcleo del lead B2B está entre <b>45 y 64 años</b>: 78 de los 119 leads. El tramo <b>55-64</b> es el que mejor convierte (1,67 €, CTR 2,48%) y el de <b>65+</b> también entra barato aunque con poco volumen. Los tramos jóvenes rinden peor: 18-24 no genera ningún lead y 25-34 y 35-44 están por encima de la media de coste. Tiene toda la lógica: quien decide el surtido de una tienda o la carta de un restaurante suele ser el propietario, y ese perfil es maduro.</p></div>
+<h3>5c · Buyer persona por segmento (B2B)</h3>
+<div class="cards">
+<div class="card"><div class="tag">Perfil principal</div><div class="title">Hombre 55-64</div><div class="stats"><div><span>CTR enlace</span><b>2,31%</b></div><div><span>CPL</span><b>1,43 €</b></div><div><span>Leads</span><b>21</b></div><div><span>Gasto</span><b>30,12 €</b></div></div><p>El propietario de negocio consolidado. Es el segmento con más leads entre los hombres y uno de los CPL más bajos de la campaña. Frecuencia ya alta (2,9×): se le está impactando mucho.</p></div>
+<div class="card"><div class="tag">Perfil secundario</div><div class="title">Mujer 45-54</div><div class="stats"><div><span>CTR enlace</span><b>2,06%</b></div><div><span>CPL</span><b>2,28 €</b></div><div><span>Leads</span><b>24</b></div><div><span>Gasto</span><b>54,76 €</b></div></div><p>El segmento que más leads aporta en volumen y el que más gasto recibe. Convierte a un coste algo por encima de la media, pero es el más grande de la audiencia y el más afín al mundo gourmet.</p></div>
+<div class="card"><div class="tag">Emergente</div><div class="title">Hombre 45-54</div><div class="stats"><div><span>CTR enlace</span><b>1,79%</b></div><div><span>CPL</span><b>1,68 €</b></div><div><span>Leads</span><b>18</b></div><div><span>Gasto</span><b>30,16 €</b></div></div><p>Buen equilibrio entre volumen y coste. Junto al 55-64 masculino forma el bloque que más sentido tiene reforzar cuando se valide la calidad.</p></div>
+<div class="card"><div class="tag">Sorpresa del mes</div><div class="title">Hombre 25-34</div><div class="stats"><div><span>CTR enlace</span><b>1,88%</b></div><div><span>CPL</span><b>1,39 €</b></div><div><span>Leads</span><b>7</b></div><div><span>Gasto</span><b>9,73 €</b></div></div><p>Con poco gasto consigue el mejor CPL de toda la campaña y lidera el AES. Pocos leads, pero el dato apunta a un perfil joven de hostelería o distribución que merece un test propio.</p></div>
+</div>
+<h3>5d · Por ubicación (placement)</h3>
+<h4>Campaña B2B</h4><div class="cards">
+<div class="card"><div class="tag">Instagram</div><div class="title">Feed</div><div class="stats"><div><span>Gasto</span><b>81,84 €</b></div><div><span>Impresiones</span><b>11.985</b></div><div><span>CTR enlace</span><b>1,88%</b></div><div><span>CPM</span><b>6,83 €</b></div><div><span>Leads</span><b>48</b></div><div><span>CPL</span><b>1,71 €</b></div></div></div>
+<div class="card"><div class="tag">Instagram</div><div class="title">Instagram Stories</div><div class="stats"><div><span>Gasto</span><b>64,92 €</b></div><div><span>Impresiones</span><b>9.792</b></div><div><span>CTR enlace</span><b>1,97%</b></div><div><span>CPM</span><b>6,63 €</b></div><div><span>Leads</span><b>28</b></div><div><span>CPL</span><b>2,32 €</b></div></div></div>
+<div class="card"><div class="tag">Facebook</div><div class="title">Feed</div><div class="stats"><div><span>Gasto</span><b>63,29 €</b></div><div><span>Impresiones</span><b>12.863</b></div><div><span>CTR enlace</span><b>1,99%</b></div><div><span>CPM</span><b>4,92 €</b></div><div><span>Leads</span><b>30</b></div><div><span>CPL</span><b>2,11 €</b></div></div></div>
+<div class="card"><div class="tag">Instagram</div><div class="title">Instagram Reels</div><div class="stats"><div><span>Gasto</span><b>13,77 €</b></div><div><span>Impresiones</span><b>2.117</b></div><div><span>CTR enlace</span><b>2,46%</b></div><div><span>CPM</span><b>6,50 €</b></div><div><span>Leads</span><b>5</b></div><div><span>CPL</span><b>2,75 €</b></div></div></div>
+<div class="card"><div class="tag">Facebook</div><div class="title">Facebook Reels</div><div class="stats"><div><span>Gasto</span><b>13,54 €</b></div><div><span>Impresiones</span><b>2.718</b></div><div><span>CTR enlace</span><b>1,55%</b></div><div><span>CPM</span><b>4,98 €</b></div><div><span>Leads</span><b>7</b></div><div><span>CPL</span><b>1,93 €</b></div></div></div>
+<div class="card"><div class="tag">Facebook</div><div class="title">Facebook Stories</div><div class="stats"><div><span>Gasto</span><b>4,87 €</b></div><div><span>Impresiones</span><b>752</b></div><div><span>CTR enlace</span><b>3,72%</b></div><div><span>CPM</span><b>6,48 €</b></div><div><span>Leads</span><b>1</b></div><div><span>CPL</span><b>4,87 €</b></div></div></div>
+</div><h4>Campaña de reconocimiento</h4><div class='cards'>
+<div class="card"><div class="tag">Instagram</div><div class="title">Instagram Stories</div><div class="stats"><div><span>Gasto</span><b>50,84 €</b></div><div><span>Impresiones</span><b>11.051</b></div><div><span>CTR enlace</span><b>7,90%</b></div><div><span>CPM</span><b>4,60 €</b></div><div><span>Visitas perfil</span><b>885</b></div><div><span>Coste/visita</span><b>0,057 €</b></div></div></div>
+<div class="card"><div class="tag">Instagram</div><div class="title">Instagram Reels</div><div class="stats"><div><span>Gasto</span><b>23,10 €</b></div><div><span>Impresiones</span><b>9.528</b></div><div><span>CTR enlace</span><b>5,67%</b></div><div><span>CPM</span><b>2,42 €</b></div><div><span>Visitas perfil</span><b>490</b></div><div><span>Coste/visita</span><b>0,047 €</b></div></div></div>
+<div class="card"><div class="tag">Facebook</div><div class="title">Facebook Reels</div><div class="stats"><div><span>Gasto</span><b>22,13 €</b></div><div><span>Impresiones</span><b>7.424</b></div><div><span>CTR enlace</span><b>4,86%</b></div><div><span>CPM</span><b>2,98 €</b></div><div><span>Visitas perfil</span><b>617</b></div><div><span>Coste/visita</span><b>0,036 €</b></div></div></div>
+<div class="card"><div class="tag">Instagram</div><div class="title">Feed</div><div class="stats"><div><span>Gasto</span><b>21,99 €</b></div><div><span>Impresiones</span><b>7.133</b></div><div><span>CTR enlace</span><b>5,45%</b></div><div><span>CPM</span><b>3,08 €</b></div><div><span>Visitas perfil</span><b>419</b></div><div><span>Coste/visita</span><b>0,052 €</b></div></div></div>
+<div class="card"><div class="tag">Facebook</div><div class="title">Facebook Stories</div><div class="stats"><div><span>Gasto</span><b>18,27 €</b></div><div><span>Impresiones</span><b>3.861</b></div><div><span>CTR enlace</span><b>7,87%</b></div><div><span>CPM</span><b>4,73 €</b></div><div><span>Visitas perfil</span><b>557</b></div><div><span>Coste/visita</span><b>0,033 €</b></div></div></div>
+<div class="card"><div class="tag">Facebook</div><div class="title">Feed</div><div class="stats"><div><span>Gasto</span><b>16,46 €</b></div><div><span>Impresiones</span><b>7.213</b></div><div><span>CTR enlace</span><b>2,58%</b></div><div><span>CPM</span><b>2,28 €</b></div><div><span>Visitas perfil</span><b>330</b></div><div><span>Coste/visita</span><b>0,050 €</b></div></div></div>
+</div>
+<div class="alert info"><h4>Qué ubicación manda</h4><p>En B2B gana el <b>Feed de Instagram</b>: 48 leads a 1,71 €, el mejor coste con volumen. <b>Feed de Facebook</b> es la segunda vía (30 leads a 2,11 €) con el CPM más bajo (4,92 €): el comprador de negocio maduro está en Facebook y conviene mantenerlo. <b>Stories de Instagram</b> recibe el 27% del gasto pero convierte más caro (2,32 €): es el formato de impacto, no el de formulario. En reconocimiento la foto se invierte: Stories de Instagram es la ubicación reina (CTR 7,90%) y Reels de Facebook da la visita al perfil más barata. Instagram concentra el 66% del gasto B2B y Facebook el 34%; el reparto es razonable y no hace falta forzarlo.</p></div>
+</div>
+<div class="section" id="s6"><div class="section-num">SECCIÓN 06</div><h2>Cambios estructurales & frecuencia</h2>
+<h3>6a · Cambios estructurales del mes</h3>
+<div class="cards">
+<div class="card prio-red"><div class="tag"><span class="badge bad">🔴 CAMBIO CLAVE</span></div><div class="title">Lanzamiento de la campaña B2B de captación de leads</div><p><b>Qué cambió:</b> nueva campaña con objetivo Clientes potenciales, 8 conjuntos (Gourmet, HORECA, Regalo corporativo y Distribución × formulario Meta / formulario web) y presupuesto repartido a partes iguales para el test.<br><b>Cuándo:</b> septiembre 2026 (primer mes).<br><b>Inversión:</b> 242,66 €.<br><b>Resultado:</b> 119 leads a 2,04 €, con el formulario Meta como vía ganadora en coste.</p></div>
+<div class="card prio-red"><div class="tag"><span class="badge bad">🔴 CAMBIO CLAVE</span></div><div class="title">Cambio de objetivo de la cuenta: de venta online a B2B</div><p><b>Qué cambió:</b> todas las campañas de conversión a consumidor final quedan apagadas; la cuenta pasa a medir leads y visitas al perfil.<br><b>Cuándo:</b> inicio de septiembre.<br><b>Resultado:</b> el buyer persona, las creatividades y el KPI de referencia cambian; este reporte fija la nueva línea base.</p></div>
+<div class="card prio-yellow"><div class="tag"><span class="badge warn">🟡 CAMBIO IMPORTANTE</span></div><div class="title">Pausa de los conjuntos web y del de Regalo corporativo por formulario</div><p><b>Qué cambió:</b> a cierre de mes solo siguen activos los tres conjuntos de formulario Meta con mejor coste (Gourmet, HORECA, Distribución).<br><b>Inversión en los pausados:</b> 156,20 €.<br><b>Resultado:</b> concentración del presupuesto en la vía que da leads a 1,39 €, a la espera de validar calidad.</p></div>
+<div class="card prio-purple"><div class="tag"><span class="badge purple">🟣 AJUSTE</span></div><div class="title">Apagado del anuncio más caro (ad 3, HORECA web)</div><p><b>Qué cambió:</b> se desactiva el anuncio con peor coste y volumen suficiente para juzgarlo.<br><b>Cuándo:</b> última semana de septiembre.<br><b>Inversión:</b> 25,34 €.<br><b>Resultado:</b> 8 leads a 3,17 €, un 55% por encima de la media.</p></div>
+<div class="card prio-purple"><div class="tag"><span class="badge purple">🟣 AJUSTE</span></div><div class="title">Reel del 27/08 añadido a la campaña de reconocimiento</div><p><b>Qué cambió:</b> rotación de creatividad en POP_RECO_SEGUIDORES_0826, que se mantiene a 5 €/día.<br><b>Resultado:</b> 3.298 visitas al perfil a 0,046 € en el mes.</p></div>
+</div>
+<h3>6b · Frecuencia & saturación</h3>
+<div class="kpi-grid">
+<div class="kpi gold"><div class="label">B2B_CAPTACIÓNLEADS</div><div class="value">2,2×</div><div class="sub-value">umbral de alerta 2,5× (conversión)</div></div>
+<div class="kpi "><div class="label">POP_RECO_SEGUIDORES</div><div class="value">1,3×</div><div class="sub-value">umbral de alerta 3× (reconocimiento)</div></div>
+<div class="kpi gold"><div class="label">Hombre 55-64 (B2B)</div><div class="value">2,9×</div><div class="sub-value">segmento más impactado</div></div>
+<div class="kpi "><div class="label">FORM Distribución</div><div class="value">1,6×</div><div class="sub-value">conjunto activo con más frecuencia</div></div>
+</div>
+<div class="alert warn"><h4>Conclusión de saturación</h4><p>La campaña B2B cierra el mes rozando el umbral de alerta (2,2× sobre un alcance de ≈18.368 personas) y algunos segmentos masculinos maduros ya superan las 2,5×. No es saturación todavía, pero sí la señal de que <b>la audiencia B2B es pequeña y no se escala subiendo presupuesto sobre los mismos conjuntos</b>: se escala con creatividades nuevas, con públicos similares a partir de los leads buenos y, cuando el píxel esté bien, con retargeting. La campaña de reconocimiento tiene margen de sobra (1,3×).</p></div>
+</div>
+<div class="section" id="s7"><div class="section-num">SECCIÓN 07</div><h2>Top creatividades & métricas de vídeo</h2>
+<p class="sub">Los anuncios se muestran con el nombre tal como aparece en el administrador y el conjunto al que pertenecen (hay nombres repetidos entre conjuntos). Solo se valoran anuncios con al menos 3 leads; los demás no tienen volumen para juzgarlos.</p>
+<h3>7a · Anuncios destacados por coste por lead</h3>
+<div class="cards">
+<div class="card"><div class="tag">🏆 TOP 1 · FORM Distribución</div><div class="title">ad 1</div><div class="stats"><div><span>Gasto</span><b>21,68 €</b></div><div><span>Leads</span><b>26</b></div><div><span>CPL</span><b>0,83 €</b></div><div><span>Impresiones</span><b>4.779</b></div><div><span>CTR enlace</span><b>2,16%</b></div><div><span>Estado</span><b>Activo</b></div></div><div style="margin-top:8px"><span class="badge good">EFICIENTE</span></div></div>
+<div class="card"><div class="tag">TOP 2 · FORM Gourmet</div><div class="title">ad 1</div><div class="stats"><div><span>Gasto</span><b>11,76 €</b></div><div><span>Leads</span><b>10</b></div><div><span>CPL</span><b>1,18 €</b></div><div><span>Impresiones</span><b>2.593</b></div><div><span>CTR enlace</span><b>1,58%</b></div><div><span>Estado</span><b>Activo</b></div></div><div style="margin-top:8px"><span class="badge good">EFICIENTE</span></div></div>
+<div class="card"><div class="tag">TOP 3 · FORM Gourmet</div><div class="title">ad 4</div><div class="stats"><div><span>Gasto</span><b>16,70 €</b></div><div><span>Leads</span><b>14</b></div><div><span>CPL</span><b>1,19 €</b></div><div><span>Impresiones</span><b>3.229</b></div><div><span>CTR enlace</span><b>2,23%</b></div><div><span>Estado</span><b>Activo</b></div></div><div style="margin-top:8px"><span class="badge good">EFICIENTE</span></div></div>
+<div class="card"><div class="tag">TOP 4 · FORM Regalo Corporativo</div><div class="title">ad_21</div><div class="stats"><div><span>Gasto</span><b>3,73 €</b></div><div><span>Leads</span><b>3</b></div><div><span>CPL</span><b>1,24 €</b></div><div><span>Impresiones</span><b>587</b></div><div><span>CTR enlace</span><b>1,19%</b></div><div><span>Estado</span><b>Pausado</b></div></div><div style="margin-top:8px"><span class="badge good">EFICIENTE</span></div></div>
+<div class="card"><div class="tag">TOP 5 · FORM Regalo Corporativo</div><div class="title">ad_19</div><div class="stats"><div><span>Gasto</span><b>5,88 €</b></div><div><span>Leads</span><b>4</b></div><div><span>CPL</span><b>1,47 €</b></div><div><span>Impresiones</span><b>867</b></div><div><span>CTR enlace</span><b>1,85%</b></div><div><span>Estado</span><b>Pausado</b></div></div><div style="margin-top:8px"><span class="badge good">EFICIENTE</span></div></div>
+</div>
+<h3>7b · Anuncios hacia lead · formulario Meta</h3>
+<div class="table-wrap"><table><tr><th>Anuncio</th><th>Conjunto</th><th class="n">Gasto</th><th class="n">Impr.</th><th class="n">Clics</th><th class="n">CTR enl.</th><th class="n">Leads</th><th class="n">CPL</th><th>Estado</th></tr>
+<tr><td><b>ad_22</b></td><td>Regalo Corporativo</td><td class='n'>22,38 €</td><td class='n'>3.705</td><td class='n'>60</td><td class='n'>1,62%</td><td class='n'>7</td><td class='n'>3,20 €</td><td><span class="badge neutral">PAUSADO</span></td></tr>
+<tr><td><b>ad 1</b></td><td>Distribución</td><td class='n'>21,68 €</td><td class='n'>4.779</td><td class='n'>103</td><td class='n'>2,16%</td><td class='n'>26</td><td class='n'>0,83 €</td><td><span class="badge good">ACTIVO</span></td></tr>
+<tr><td><b>ad4</b></td><td>HORECA</td><td class='n'>17,58 €</td><td class='n'>2.456</td><td class='n'>33</td><td class='n'>1,34%</td><td class='n'>10</td><td class='n'>1,76 €</td><td><span class="badge good">ACTIVO</span></td></tr>
+<tr><td><b>ad 4</b></td><td>Gourmet</td><td class='n'>16,70 €</td><td class='n'>3.229</td><td class='n'>72</td><td class='n'>2,23%</td><td class='n'>14</td><td class='n'>1,19 €</td><td><span class="badge good">ACTIVO</span></td></tr>
+<tr><td><b>ad 1</b></td><td>Gourmet</td><td class='n'>11,76 €</td><td class='n'>2.593</td><td class='n'>41</td><td class='n'>1,58%</td><td class='n'>10</td><td class='n'>1,18 €</td><td><span class="badge good">ACTIVO</span></td></tr>
+<tr><td><b>REEL PERFIL</b></td><td>HORECA</td><td class='n'>6,05 €</td><td class='n'>845</td><td class='n'>16</td><td class='n'>1,89%</td><td class='n'>3</td><td class='n'>2,02 €</td><td><span class="badge good">ACTIVO</span></td></tr>
+<tr><td><b>ad_19</b></td><td>Regalo Corporativo</td><td class='n'>5,88 €</td><td class='n'>867</td><td class='n'>16</td><td class='n'>1,85%</td><td class='n'>4</td><td class='n'>1,47 €</td><td><span class="badge neutral">PAUSADO</span></td></tr>
+<tr><td><b>ad5</b></td><td>HORECA</td><td class='n'>4,51 €</td><td class='n'>590</td><td class='n'>11</td><td class='n'>1,86%</td><td class='n'>3</td><td class='n'>1,50 €</td><td><span class="badge good">ACTIVO</span></td></tr>
+<tr><td><b>ad_21</b></td><td>Regalo Corporativo</td><td class='n'>3,73 €</td><td class='n'>587</td><td class='n'>7</td><td class='n'>1,19%</td><td class='n'>3</td><td class='n'>1,24 €</td><td><span class="badge neutral">PAUSADO</span></td></tr>
+<tr><td><b>ad3</b></td><td>HORECA</td><td class='n'>2,46 €</td><td class='n'>330</td><td class='n'>8</td><td class='n'>2,42%</td><td class='n'>1</td><td class='n'>2,46 €</td><td><span class="badge good">ACTIVO</span></td></tr>
+<tr><td><b>ad 3</b></td><td>Gourmet</td><td class='n'>1,66 €</td><td class='n'>338</td><td class='n'>8</td><td class='n'>2,37%</td><td class='n'>2</td><td class='n'>0,83 €</td><td><span class="badge good">ACTIVO</span></td></tr>
+<tr><td><b>ad 4</b></td><td>Distribución</td><td class='n'>1,34 €</td><td class='n'>272</td><td class='n'>6</td><td class='n'>2,21%</td><td class='n'>1</td><td class='n'>1,34 €</td><td><span class="badge good">ACTIVO</span></td></tr>
+</table></div>
+<h4>Anuncios hacia lead · formulario web</h4>
+<div class="table-wrap"><table><tr><th>Anuncio</th><th>Conjunto</th><th class="n">Gasto</th><th class="n">Impr.</th><th class="n">Clics</th><th class="n">CTR enl.</th><th class="n">Leads</th><th class="n">CPL</th><th>Estado</th></tr>
+<tr><td><b>ad 3</b></td><td>HORECA</td><td class='n'>25,34 €</td><td class='n'>3.540</td><td class='n'>78</td><td class='n'>2,20%</td><td class='n'>8</td><td class='n'>3,17 €</td><td><span class="badge neutral">PAUSADO</span></td></tr>
+<tr><td><b>ad 1</b></td><td>Distribución</td><td class='n'>21,18 €</td><td class='n'>3.311</td><td class='n'>67</td><td class='n'>2,02%</td><td class='n'>7</td><td class='n'>3,03 €</td><td><span class="badge neutral">PAUSADO</span></td></tr>
+<tr><td><b>ad_22</b></td><td>Regalo Corporativo</td><td class='n'>14,86 €</td><td class='n'>2.466</td><td class='n'>39</td><td class='n'>1,58%</td><td class='n'>3</td><td class='n'>4,95 €</td><td><span class="badge neutral">PAUSADO</span></td></tr>
+<tr><td><b>ad4</b></td><td>Gourmet</td><td class='n'>14,79 €</td><td class='n'>1.960</td><td class='n'>40</td><td class='n'>2,04%</td><td class='n'>5</td><td class='n'>2,96 €</td><td><span class="badge neutral">PAUSADO</span></td></tr>
+<tr><td><b>ad_24</b></td><td>Regalo Corporativo</td><td class='n'>14,23 €</td><td class='n'>2.750</td><td class='n'>59</td><td class='n'>2,15%</td><td class='n'>4</td><td class='n'>3,56 €</td><td><span class="badge neutral">PAUSADO</span></td></tr>
+<tr><td><b>ad 3</b></td><td>Gourmet</td><td class='n'>10,57 €</td><td class='n'>1.769</td><td class='n'>40</td><td class='n'>2,26%</td><td class='n'>3</td><td class='n'>3,52 €</td><td><span class="badge neutral">PAUSADO</span></td></tr>
+<tr><td><b>ad 5</b></td><td>HORECA</td><td class='n'>3,95 €</td><td class='n'>465</td><td class='n'>13</td><td class='n'>2,80%</td><td class='n'>0</td><td class='n'>—</td><td><span class="badge neutral">PAUSADO</span></td></tr>
+<tr><td><b>ad 1</b></td><td>Gourmet</td><td class='n'>3,87 €</td><td class='n'>526</td><td class='n'>9</td><td class='n'>1,71%</td><td class='n'>2</td><td class='n'>1,94 €</td><td><span class="badge neutral">PAUSADO</span></td></tr>
+<tr><td><b>ad 4</b></td><td>HORECA</td><td class='n'>2,95 €</td><td class='n'>348</td><td class='n'>3</td><td class='n'>0,86%</td><td class='n'>0</td><td class='n'>—</td><td><span class="badge neutral">PAUSADO</span></td></tr>
+<tr><td><b>ad 2- Copia</b></td><td>Gourmet</td><td class='n'>2,39 €</td><td class='n'>320</td><td class='n'>6</td><td class='n'>1,88%</td><td class='n'>0</td><td class='n'>—</td><td><span class="badge neutral">PAUSADO</span></td></tr>
+<tr><td><b>ad 3</b></td><td>Distribución</td><td class='n'>2,14 €</td><td class='n'>442</td><td class='n'>15</td><td class='n'>3,39%</td><td class='n'>1</td><td class='n'>2,14 €</td><td><span class="badge neutral">PAUSADO</span></td></tr>
+<tr><td><b>REEL PERFIL</b></td><td>HORECA</td><td class='n'>2,14 €</td><td class='n'>509</td><td class='n'>14</td><td class='n'>2,75%</td><td class='n'>0</td><td class='n'>—</td><td><span class="badge neutral">PAUSADO</span></td></tr>
+<tr><td><b>ad 1</b></td><td>HORECA</td><td class='n'>1,68 €</td><td class='n'>213</td><td class='n'>10</td><td class='n'>4,69%</td><td class='n'>1</td><td class='n'>1,68 €</td><td><span class="badge neutral">PAUSADO</span></td></tr>
+<tr><td><b>ad_19</b></td><td>Regalo Corporativo</td><td class='n'>1,17 €</td><td class='n'>190</td><td class='n'>1</td><td class='n'>0,53%</td><td class='n'>0</td><td class='n'>—</td><td><span class="badge neutral">PAUSADO</span></td></tr>
+</table></div>
+<div class="alert bad"><h4>Anuncio ganador y recomendación de presupuesto</h4><p>El <b>ad 1 del conjunto de Distribución (formulario Meta)</b> es el ganador claro del mes: 26 leads a 0,83 €, menos de la mitad del CPL medio, con un CTR del 2,16%. Le siguen el <b>ad 4 y el ad 1 de Gourmet</b>, los dos por debajo de 1,20 €. En el extremo contrario, los anuncios de Regalo corporativo (ad_22 en ambas vías) y los de HORECA web están entre 3 y 5 € por lead. Recomendación: <b>no tocar el presupuesto del ganador hasta validar la calidad de sus leads</b>; cuando se confirme, duplicar su ángulo en los otros tres perfiles (misma estructura de mensaje, adaptado a cada negocio) en lugar de subirle el presupuesto a él.</p></div>
+<h3>7c · Funnel de retención de vídeo</h3>
+<div class="alert warn"><h4>Métricas de vídeo no disponibles este mes</h4><p>El export de septiembre no incluye las columnas de reproducciones de vídeo (3 s, 25/50/75/95 %, ThruPlays), por lo que no es posible calcular Hook Rate ni Hold Rate. Los anuncios de la campaña B2B son mayoritariamente estáticos y solo hay dos creatividades de vídeo (REEL PERFIL, 8,19 € entre las dos). Para el reporte de octubre, añadiremos las columnas de vídeo al export y, si se incorporan vídeos a la campaña B2B, aquí aparecerá el embudo completo.</p></div>
+</div>
+<div class="section" id="s8"><div class="section-num">SECCIÓN 08</div><h2>Audience Efficiency Score (AES)</h2>
+<p class="sub">El AES es una métrica compuesta propia de Caimán Agency que normaliza la eficiencia de cada segmento (edad × género) combinando CTR enlace, CPM y coste por lead. 100 = la media de la campaña B2B; por encima, el segmento rinde mejor; por debajo, peor. Se excluyen los segmentos con menos de 500 impresiones y los de género no declarado.</p>
+<div class="formula">AES = (CTR segmento / 1,97%) × (6,00 € / CPM segmento) × (2,04 € / CPL segmento) × 100</div>
+<div class="table-wrap" style="padding:10px 16px">
+<div class="aes-row"><div style="font-family:'Spline Sans Mono',monospace;color:var(--muted)">#1</div><div>Hombre 25-34</div><div class="aes-track"><div class="fill" style="width:100.0%;background:var(--good)"></div><div class="mid" style="left:54.5%"></div></div><div class="aes-val" style="color:var(--good)">183</div></div>
+<div class="aes-row"><div style="font-family:'Spline Sans Mono',monospace;color:var(--muted)">#2</div><div>Hombre 55-64</div><div class="aes-track"><div class="fill" style="width:84.5%;background:var(--good)"></div><div class="mid" style="left:54.5%"></div></div><div class="aes-val" style="color:var(--good)">155</div></div>
+<div class="aes-row"><div style="font-family:'Spline Sans Mono',monospace;color:var(--muted)">#3</div><div>Hombre 65+</div><div class="aes-track"><div class="fill" style="width:73.7%;background:var(--good)"></div><div class="mid" style="left:54.5%"></div></div><div class="aes-val" style="color:var(--good)">135</div></div>
+<div class="aes-row"><div style="font-family:'Spline Sans Mono',monospace;color:var(--muted)">#4</div><div>Hombre 45-54</div><div class="aes-track"><div class="fill" style="width:68.2%;background:var(--good)"></div><div class="mid" style="left:54.5%"></div></div><div class="aes-val" style="color:var(--good)">125</div></div>
+<div class="aes-row"><div style="font-family:'Spline Sans Mono',monospace;color:var(--muted)">#5</div><div>Hombre 35-44</div><div class="aes-track"><div class="fill" style="width:58.8%;background:var(--good)"></div><div class="mid" style="left:54.5%"></div></div><div class="aes-val" style="color:var(--good)">108</div></div>
+<div class="aes-row"><div style="font-family:'Spline Sans Mono',monospace;color:var(--muted)">#6</div><div>Mujer 55-64</div><div class="aes-track"><div class="fill" style="width:48.8%;background:var(--bad)"></div><div class="mid" style="left:54.5%"></div></div><div class="aes-val" style="color:var(--bad)">90</div></div>
+<div class="aes-row"><div style="font-family:'Spline Sans Mono',monospace;color:var(--muted)">#7</div><div>Mujer 45-54</div><div class="aes-track"><div class="fill" style="width:44.7%;background:var(--bad)"></div><div class="mid" style="left:54.5%"></div></div><div class="aes-val" style="color:var(--bad)">82</div></div>
+<div class="aes-row"><div style="font-family:'Spline Sans Mono',monospace;color:var(--muted)">#8</div><div>Mujer 35-44</div><div class="aes-track"><div class="fill" style="width:34.8%;background:var(--bad)"></div><div class="mid" style="left:54.5%"></div></div><div class="aes-val" style="color:var(--bad)">64</div></div>
+<div class="aes-row"><div style="font-family:'Spline Sans Mono',monospace;color:var(--muted)">#9</div><div>Mujer 25-34</div><div class="aes-track"><div class="fill" style="width:29.1%;background:var(--bad)"></div><div class="mid" style="left:54.5%"></div></div><div class="aes-val" style="color:var(--bad)">53</div></div>
+</div>
+<div class="table-wrap"><table><tr><th>#</th><th>Segmento</th><th class="n">Gasto</th><th class="n">% gasto</th><th class="n">CTR enl.</th><th class="n">CPM</th><th class="n">Leads</th><th class="n">CPL</th><th class="n">AES</th></tr>
+<tr><td>1</td><td><b>Hombre 25-34</b></td><td class='n'>9,73 €</td><td class='n'>4%</td><td class='n'>1,88%</td><td class='n'>4,56 €</td><td class='n'>7</td><td class='n'>1,39 €</td><td class='n'><span class="badge good">183</span></td></tr>
+<tr><td>2</td><td><b>Hombre 55-64</b></td><td class='n'>30,12 €</td><td class='n'>12%</td><td class='n'>2,31%</td><td class='n'>6,44 €</td><td class='n'>21</td><td class='n'>1,43 €</td><td class='n'><span class="badge good">155</span></td></tr>
+<tr><td>3</td><td><b>Hombre 65+</b></td><td class='n'>6,74 €</td><td class='n'>3%</td><td class='n'>3,58%</td><td class='n'>7,31 €</td><td class='n'>3</td><td class='n'>2,25 €</td><td class='n'><span class="badge good">135</span></td></tr>
+<tr><td>4</td><td><b>Hombre 45-54</b></td><td class='n'>30,16 €</td><td class='n'>12%</td><td class='n'>1,79%</td><td class='n'>5,29 €</td><td class='n'>18</td><td class='n'>1,68 €</td><td class='n'><span class="badge good">125</span></td></tr>
+<tr><td>5</td><td><b>Hombre 35-44</b></td><td class='n'>18,42 €</td><td class='n'>8%</td><td class='n'>1,61%</td><td class='n'>5,02 €</td><td class='n'>10</td><td class='n'>1,84 €</td><td class='n'><span class="badge good">108</span></td></tr>
+<tr><td>6</td><td><b>Mujer 55-64</b></td><td class='n'>27,65 €</td><td class='n'>11%</td><td class='n'>2,54%</td><td class='n'>7,63 €</td><td class='n'>12</td><td class='n'>2,30 €</td><td class='n'><span class="badge bad">90</span></td></tr>
+<tr><td>7</td><td><b>Mujer 45-54</b></td><td class='n'>54,76 €</td><td class='n'>23%</td><td class='n'>2,06%</td><td class='n'>6,84 €</td><td class='n'>24</td><td class='n'>2,28 €</td><td class='n'><span class="badge bad">82</span></td></tr>
+<tr><td>8</td><td><b>Mujer 35-44</b></td><td class='n'>34,82 €</td><td class='n'>14%</td><td class='n'>1,59%</td><td class='n'>5,77 €</td><td class='n'>13</td><td class='n'>2,68 €</td><td class='n'><span class="badge bad">64</span></td></tr>
+<tr><td>9</td><td><b>Mujer 25-34</b></td><td class='n'>17,87 €</td><td class='n'>7%</td><td class='n'>1,48%</td><td class='n'>4,82 €</td><td class='n'>5</td><td class='n'>3,57 €</td><td class='n'><span class="badge bad">53</span></td></tr>
+</table></div>
+<div class="alert info"><h4>Lectura del AES</h4><p>El ranking es casi una línea divisoria por género: <b>los cinco segmentos masculinos están por encima de 100 y los cuatro femeninos por debajo</b>. Arriba, Hombre 25-34 (183) y Hombre 55-64 (155); abajo, Mujer 25-34 (53) y Mujer 35-44 (64). Las mujeres de 45-64 están cerca de la media y aportan mucho volumen, así que no son el problema; el gasto que realmente no rinde es el de <b>mujeres de 25 a 44 años</b> (52,69 €, 22% del total, 18 leads). Reasignación sugerida: dejar que la campaña pase a optimizar sin restricciones y, si en octubre el patrón se repite con la calidad validada, acotar la edad mínima a 35 en los conjuntos de HORECA y Distribución. Reservamos la lectura definitiva hasta cruzar el AES con qué leads han sido útiles para Popit.</p></div>
+</div>
+<div class="section" id="s9"><div class="section-num">SECCIÓN 09</div><h2>Next steps priorizados</h2>
+<div class="cards">
+<div class="card prio-red"><div class="tag"><span class="badge bad">🔴 URGENTE</span></div><div class="title">Validar la calidad de los 119 leads con Popit</div><p>Es lo primero, porque todas las demás decisiones dependen de ello. (a) Revisar la hoja de leads y marcar cada uno como válido / no válido / sin contactar, con el tipo de negocio real. (b) Calcular el % de leads válidos por conjunto y por vía (formulario Meta vs web). (c) Fijar con ello un <b>CPL objetivo por perfil</b> y, más adelante, el coste por punto de venta conseguido, que es el KPI que de verdad importa.<br><b>Referencia:</b> si menos del 40% de los leads de formulario Meta son negocios reales, la vía web vuelve a estar sobre la mesa aunque sea más cara.</p></div>
+<div class="card prio-red"><div class="tag"><span class="badge bad">🔴 URGENTE</span></div><div class="title">Cerrar la medición del píxel y el consentimiento en popit.es</div><p>Los conjuntos web dependen del evento Lead del píxel y el bloqueo de consentimiento sigue sin resolverse, así que es probable que esos leads estén infrarreportados. (a) Revisar la configuración del banner de cookies para que el píxel dispare tras el consentimiento. (b) Verificar el evento Lead en el formulario web con el Test Events. (c) Valorar la Conversions API para no depender solo del navegador.<br><b>Referencia:</b> leads reportados en Meta = leads recibidos en la hoja de contactos web, con una diferencia inferior al 10%.</p></div>
+<div class="card prio-yellow"><div class="tag"><span class="badge warn">🟡 IMPORTANTE</span></div><div class="title">Replicar el ángulo ganador (ad 1 Distribución) en los otros perfiles</div><p>(a) Extraer el mensaje y la estructura del ad 1 de Distribución (26 leads a 0,83 €). (b) Adaptarlo a Gourmet, HORECA y Regalo corporativo manteniendo la estructura y cambiando el argumento de negocio. (c) Lanzar como creatividad nueva dentro de cada conjunto activo, sin mover el presupuesto del original.<br><b>Referencia:</b> CPL por debajo de 1,39 € en cada perfil con al menos 10 leads.</p></div>
+<div class="card prio-yellow"><div class="tag"><span class="badge warn">🟡 IMPORTANTE</span></div><div class="title">Preparar el ángulo de Regalo corporativo para la campaña de Navidad</div><p>Fue el perfil más caro de septiembre (2,99 €), pero es el que tiene temporada por delante: los departamentos de RRHH y las empresas cierran los regalos de Navidad en octubre y noviembre. (a) Nuevo copy con enfoque "regalo de empresa personalizable" y fechas límite de pedido. (b) Creatividad con el producto en formato caja/lote. (c) Reactivar el conjunto de formulario Meta con el nuevo ángulo a partir de mediados de octubre.<br><b>Referencia:</b> CPL por debajo de 2,50 € y al menos 15 leads en el mes.</p></div>
+<div class="card prio-purple"><div class="tag"><span class="badge purple">🟣 MEJORA</span></div><div class="title">Audiencia similar a partir de los leads válidos</div><p>Cuando se haya hecho la limpieza de calidad: (a) subir la lista de leads válidos como audiencia personalizada. (b) Crear un público similar al 1-2% en España. (c) Abrir un conjunto de prueba con el ángulo ganador sobre ese público.<br><b>Referencia:</b> CPL igual o inferior al conjunto de origen con frecuencia por debajo de 2×.</p></div>
+<div class="card prio-purple"><div class="tag"><span class="badge purple">🟣 MEJORA</span></div><div class="title">Aclarar el público de la campaña de reconocimiento</div><p>POP_RECO_SEGUIDORES_0826 funciona muy bien en coste, pero sigue apuntando al consumidor final (86% mujeres). En una etapa B2B conviene decidir si (a) se mantiene como escaparate de marca para quien recibe el anuncio B2B y visita el perfil, o (b) se reorienta a perfiles profesionales de hostelería y retail. Cualquiera de las dos vale; lo que no conviene es no decidirlo.<br><b>Referencia:</b> decisión tomada en la primera quincena de octubre.</p></div>
+<div class="card prio-purple"><div class="tag"><span class="badge purple">🟣 MEJORA</span></div><div class="title">Completar el export de octubre</div><p>Añadir el desglose por país/región y las columnas de vídeo (reproducciones 3 s, 25/50/75/95 %, ThruPlays) para que el reporte de octubre incluya el funnel de retención y la distribución geográfica de los leads.</p></div>
+</div></div>
+<div class="section conclusion" id="s10"><div class="section-num">SECCIÓN 10</div><h2>Conclusión</h2>
+<p>Septiembre ha sido el <strong>mes de arranque de la etapa B2B</strong>, y el arranque ha sido limpio: la cuenta cambia de objetivo, se monta una estructura de test ordenada y cierra con <strong>119 leads a 2,04 €</strong> sobre una inversión de <strong>242,66 €</strong>, más <strong>3.298 visitas al perfil a 0,046 €</strong> de la campaña de reconocimiento. No hay mes anterior con el que compararlo; lo que hay es una línea base clara.</p>
+<p>En la parte de reconocimiento, la campaña de 5 €/día sigue haciendo su trabajo con un CPM de <strong>3,31 €</strong> y un CTR del <strong>5,74%</strong>. Stories de Instagram es su mejor ubicación y Reels de Facebook da la visita más barata. Es la campaña que sostiene la imagen de marca mientras la B2B hace la captación.</p>
+<p>En captación, la lectura más importante del mes es la de la vía: <strong>el formulario nativo de Meta da 85 leads a 1,39 €</strong> y el formulario web 34 a 3,65 €. Por perfil, <strong>Distribución y Gourmet</strong> son los más eficientes y <strong>Regalo corporativo y HORECA</strong> los más caros, que son precisamente los dos de mayor interés comercial. El problema de fondo no es el coste, es que todavía no sabemos cuántos de esos leads son negocios reales.</p>
+<p>En creatividades hay un ganador sin discusión: <strong>el ad 1 de Distribución, con 26 leads a 0,83 €</strong>, seguido de los dos anuncios de Gourmet por debajo de 1,20 €. Los anuncios de Regalo corporativo y de HORECA web están entre 3 y 5 € por lead. Las métricas de vídeo no vienen en el export de este mes y la campaña es mayoritariamente estática, así que el funnel de retención queda para octubre.</p>
+<p>El AES dibuja una línea muy nítida: <strong>los cinco segmentos masculinos rinden por encima de la media y los cuatro femeninos por debajo</strong>. Las mujeres de 45 a 64 están cerca de la media y aportan volumen, pero las de <strong>25 a 44 años</strong> se llevan un 22% del gasto para muy pocos leads. Es el primer candidato a reasignación cuando la calidad esté validada.</p>
+<p>En cuanto a salud de la cuenta, la campaña B2B cierra con una frecuencia de <strong>2,2×</strong> sobre una audiencia pequeña. No hay saturación todavía, pero sí el aviso de que <strong>esta campaña no se escala subiendo presupuesto, sino con creatividades nuevas y públicos similares</strong>. La de reconocimiento, a 1,3×, tiene todo el margen.</p>
+<div class="focus-box"><h4>Tres focos para octubre</h4><div class="focus-list">
+<div class="focus-item"><span class="focus-num">01</span><span><strong style="color:var(--text)">Calidad antes que coste.</strong> Validar con Popit los 119 leads de septiembre, fijar un CPL objetivo por perfil y empezar a medir el coste por punto de venta conseguido.</span></div>
+<div class="focus-item"><span class="focus-num">02</span><span><strong style="color:var(--text)">Escalar lo que funciona, sin romperlo.</strong> Replicar el ángulo del ad 1 de Distribución en el resto de perfiles y construir un público similar a partir de los leads buenos, manteniendo la frecuencia bajo control.</span></div>
+<div class="focus-item"><span class="focus-num">03</span><span><strong style="color:var(--text)">Llegar a Navidad con el regalo corporativo listo.</strong> Nuevo ángulo, nueva creatividad y el píxel de la web funcionando para que la captación de empresas de aquí a diciembre se mida bien.</span></div>
+</div></div>
+</div>
+<div class="footer"><div>Popit · Reporte de rendimiento Meta Ads · Septiembre 2026</div><div>Caimán Agency · Confidencial</div></div>
+</body></html>
